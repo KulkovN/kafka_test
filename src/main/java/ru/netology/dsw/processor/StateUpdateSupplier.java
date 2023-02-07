@@ -28,7 +28,7 @@ public class StateUpdateSupplier implements ProcessorSupplier<String, GenericRec
 
         @Override
         public void init(ProcessorContext context) {
-            this.stateStore = (KeyValueStore<String, GenericRecord>) context.getStateStore(storeName);
+            this.stateStore = context.getStateStore(storeName); // исключаем каст, т.к. есть обновление
         }
 
         @Override

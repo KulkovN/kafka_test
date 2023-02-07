@@ -22,6 +22,7 @@ public class QuantityAlertsApp {
     public static final String PURCHASE_TOPIC_NAME = "purchases";
     public static final String RESULT_TOPIC = "product_quantity_alerts-processor";
     public static final long MAX_PURCHASES_PER_MINUTE = 10L;
+    public static final long MAX_QUANT_MINUTE = 3000L; // добавил квоту для исключения в алерте
     public static final String STATE_STORE_NAME = "state-store";
 
     public static void main(String[] args) throws InterruptedException {
